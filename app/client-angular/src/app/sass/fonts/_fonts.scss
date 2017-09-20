@@ -1,0 +1,44 @@
+//
+// Fonts
+// --------------------------------------------------
+
+@font-face {
+    font-family: 'OpenRegular';
+    src: url('../assets/fonts/open-sans/OpenRegular/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/open-sans/OpenRegular/OpenSans.woff') format('woff'),
+    url('../assets/fonts/open-sans/OpenRegular/OpenSans.ttf')  format('truetype'),
+    url('../assets/fonts/open-sans/OpenRegular/OpenSans.svg#OpenSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'OpenBold';
+    src: url('../assets/fonts/open-sans/OpenBold/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/open-sans/OpenBold/OpenSans-Bold.woff') format('woff'),
+    url('../assets/fonts/open-sans/OpenBold/OpenSans-Bold.ttf')  format('truetype'),
+    url('../assets/fonts/open-sans/OpenBold/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OswaldRegular';
+    src: url('../assets/fonts/oswald/OswaldRegular/OswaldRegular.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/oswald/OswaldRegular/OswaldRegular.woff') format('woff'),
+    url('../assets/fonts/oswald/OswaldRegular/OswaldRegular.ttf') format('truetype'),
+    url('../assets/fonts/oswald/OswaldRegular/OswaldRegular.svg#OswaldRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OswaldBold';
+    src: url('../assets/fonts/oswald/OswaldBold/OswaldBold.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/oswald/OswaldBold/OswaldBold.woff') format('woff'),
+    url('../assets/fonts/oswald/OswaldBold/OswaldBold.ttf') format('truetype'),
+    url('../assets/fonts/oswald/OswaldBold/OswaldBold.svg#OswaldBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

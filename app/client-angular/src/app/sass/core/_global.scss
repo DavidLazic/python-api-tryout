@@ -1,0 +1,40 @@
+//
+// Global
+// --------------------------------------------------
+
+body {
+    position: relative;
+    font-family: $font-family-open;
+    color: #000;
+    background: $gray-darker;
+
+    &.loader-active {
+
+        * {
+            cursor: wait !important;
+        }
+    }
+
+    &.modal-wide-open {
+        overflow: hidden;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+b {
+    font-family: $font-family-openBD;
+}
+
+
+input:-webkit-autofill {
+    box-shadow: inset 0 0 0 50px #fff;
+}
+
+img {
+    max-width: 100%;
+}

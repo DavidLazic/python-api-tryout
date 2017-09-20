@@ -1,0 +1,42 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Colors
+
+$gray-darkest: #242b31;
+$gray-darker: #2a3239;
+$gray: #2f373e;
+$gray-lighter: #39424a;
+$gray-lightest: #f9f9f9;
+
+$gray-text-light: #636e77;
+$gray-text-dark: #6c7b88;
+$gray-text-darkest: #2a3239;
+
+$gray-dark-border: #c1c6d1;
+$gray-light-border: #eef1f5;
+
+
+$green: #45b6af;
+$green-lighter: #32c5d2;
+$red: #d93d5e;
+$blue-dark: #659be0;
+$blue: #009dc7;
+$cyan: #26a1ab;
+$yellow: #F1C40F;
+
+
+$label-success: $green;
+$label-info: $blue-dark;
+$label-warning: $yellow;
+$label-error: $red;
+
+
+// Typography
+$default: Helvetica, Arial, sans-serif;
+
+$font-family-open: 'OpenRegular', $default;
+$font-family-openBD: 'OpenBold', $default;
+$font-family-oswald: 'OswaldRegular', $default;
+$font-family-oswaldBD: 'OswaldBold', $default;

@@ -1,0 +1,15 @@
+<section>
+
+    <div class="form">
+        <i class="form__logo icon-logo"></i>
+
+        <form ng-submit="loginCtrl.onSubmit()" name="loginForm" autocomplete="off">
+            <input class="form__field" autocomplete="off" ng-model="loginCtrl.username" type="text" name="username" placeholder="Username">
+
+            <input class="form__field" ng-model="loginCtrl.password" type="password" name="password" placeholder="Password">
+
+            <button class="form__btn form__btn--orange" type="submit">Sign in</button>
+        </form>
+    </div>
+
+</section>

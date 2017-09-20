@@ -1,0 +1,12 @@
+<div ng-if="user">
+    <ul class="navigation">
+        <li ng-class="{ 'active': nCtrl.showWhen(link.includes) }" ng-repeat="link in nCtrl.config">
+            <a ng-if="link.state" ui-sref="{{ link.state }}" ng-bind="link.name"></a>
+        </li>
+    </ul>
+    <ul class="navigation__sub" ng-repeat="link in nCtrl.config" ng-if="nCtrl.showWhen(link.includes)">
+        <li ng-repeat="child in link.children" ng-class="{ 'active': nCtrl.showWhen(child.state) }" ng-if="link.children">
+            <a ui-sref="{{ child.state }}" ng-bind="child.name"></a>
+        </li>
+    </ul>
+</div>

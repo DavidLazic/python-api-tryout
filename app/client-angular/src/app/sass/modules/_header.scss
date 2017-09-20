@@ -1,0 +1,114 @@
+.header {
+    position: relative;
+
+    &__flip-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    &__flip {
+        @include clearfix();
+        @include transition(all, 0.25s, ease);
+        position: relative;
+        padding: 30px 25px;
+        height: 92px;
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg);
+        backface-visibility: hidden;
+        background: $gray-darker;
+
+        .header.active & {
+            transform: rotateX(0deg);
+            -webkit-transform: rotateX(0deg);
+        }
+    }
+
+    &__logo-wrapper {
+        @include centerY();
+        padding: 15px 0;
+        width: 200px;
+    }
+
+    &__logo {
+        max-width: 70%;
+    }
+
+    /***************************************************************************
+     * User menu
+     **************************************************************************/
+    &__user-wrapper {
+        position: relative;
+        float: right;
+
+        &:hover {
+            .header__user-menu {
+                display: block !important;
+                transform: rotateX(0deg);
+                -webkit-transform: rotateX(0deg);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__user {
+        padding: 10px 25px;
+        font-family: $font-family-open;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #333c43;
+        color: $blue;
+        cursor: pointer;
+    }
+
+    &__user-menu {
+        @include transition(all, 0.3s, ease);
+        position: absolute;
+        padding: 0;
+        top: 100%;
+        right: 0;
+        min-width: 180px;
+        transform: rotateX(-75deg);
+        -webkit-transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        -webkit-transform-origin: 0% 0%;
+        opacity: 0;
+        visibility: hidden;
+
+        li {
+            padding: 5px 0;
+            background: $gray-darkest;
+
+            &:first-of-type {
+                margin-top: 10px;
+                padding: 20px 0 5px;
+            }
+
+            &:last-of-type {
+                padding: 5px 0 20px;
+            }
+        }
+
+        a,
+        button {
+            display: block;
+            padding: 8px 20px;
+            width: 100%;
+            font-family: $font-family-open;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: left;
+            background: transparent;
+            color: #606e7a;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}

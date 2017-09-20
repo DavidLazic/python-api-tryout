@@ -1,0 +1,74 @@
+.profile {
+    padding: 15px;
+    border-radius: 2px;
+    background: #fff;
+
+    &__header {
+        @include clearfix();
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        margin: 30px 0 10px;
+        font-family: $font-family-open;
+    }
+
+    &__avatar-wrapper {
+        position: relative;
+        display: block;
+        margin-right: 40px;
+        width: 300px;
+        height: 340px;
+        float: left;
+
+        .ts__btn--link {
+            bottom: -30px;
+        }
+    }
+
+    &__avatar {
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__field {
+
+        &--hidden {
+            position: absolute;
+            left: -9999px;
+        }
+    }
+
+    &__info {
+        width: calc(100% - 340px);
+        float: left;
+    }
+
+    &__info-title {
+        position: relative;
+        font-family: $font-family-open;
+        font-size: 46px;
+        text-transform: uppercase;
+
+        .ts__btn--link {
+            bottom: 40px;
+
+            & + .ts__btn--link {
+                bottom: 15px;
+            }
+
+            &:last-child {
+                bottom: -10px;
+            }
+        }
+    }
+
+    .col-sm-6 {
+
+        .row + .row {
+            margin-top: 20px;
+        }
+    }
+}

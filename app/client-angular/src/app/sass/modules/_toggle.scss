@@ -1,0 +1,91 @@
+.toggle{
+    position: relative;
+    display: inline-block;
+    top: 3px;
+
+    &--absolute{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        &::after{
+            display: table-cell;
+            content: "";
+            clear: both;
+        }
+    }
+
+    &__checkbox{
+        position: absolute;
+        visibility: hidden;
+        z-index: -1;
+
+        &:checked {
+
+            & + .toggle__label{
+
+                &::before{
+                    background-color: $green;
+                }
+
+                &::after{
+                    margin-left: 17px;
+                }
+            }
+        }
+    }
+
+    &__label{
+        position: relative;
+        margin: 0;
+        display: inline-block;
+        width: 35px;
+        height: 18px;
+        border-radius: 16px;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+           position: absolute;
+           display: block;
+           content: "";
+        }
+
+        &::before{
+            @include transition(all, 0.3s, ease);
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            left: 1px;
+            border-radius: 16px;
+            background-color: $gray-lighter;
+        }
+
+        &::after{
+            @include transition(all, 0.3s, ease);
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            top: 2px;
+            bottom: -3px;
+            left: 2px;
+        }
+
+        .toggle--absolute & {
+            display: inline-block;
+            float: left;
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        margin-right: 10px;
+        float: left;
+
+        &--clickable{
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.ts__btn {
+    @include transition(all, 0.3s, ease);
+    position: relative;
+    padding: 7px 20px;
+    border-radius: 2px;
+    font-family: $font-family-openBD;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--cyan {
+        color: #fff;
+        background: $cyan;
+
+        &:hover,
+        &:active,
+        &:visited,
+        &:focus {
+            color: #fff;
+            background: darken($cyan, 5);
+        }
+    }
+
+    &--green {
+        color: #fff;
+        background: $green-lighter;
+
+        &:hover,
+        &:active,
+        &:visited,
+        &:focus {
+            color: #fff;
+            background: darken($green-lighter, 5);
+        }
+    }
+
+    &:disabled {
+        opacity: 0.6;
+    }
+}

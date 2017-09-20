@@ -1,0 +1,28 @@
+//
+// Loader
+// --------------------------------------------------
+
+.loader {
+    margin: 3px 30px 0 0;
+    float: right;
+    text-indent: -9999em;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    border-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2) $blue;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    animation: 0.4s linear 0s normal none infinite running load;
+    -webkit-animation: 0.4s linear 0s normal none infinite running load;
+    transform: translateZ(0px);
+    -webkit-transform: translateZ(0px);
+    transition: opacity 0.4s ease-out;
+    -webkit-transition: opacity 0.4s ease-out;
+
+    body.loader-active & {
+        opacity: 1;
+    }
+}

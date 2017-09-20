@@ -1,0 +1,312 @@
+$border-gray: #e1e1e1;
+
+.form {
+    margin: 0 auto;
+    padding: 0 0 100px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+
+    .modal & {
+        padding: 0;
+    }
+
+    &__rollback {
+        position: fixed;
+        top: 35px;
+        right: 25px;
+
+        span {
+            display: inline-block;
+            margin: 0 15px 0 0;
+            vertical-align: middle;
+            font-family: $font-family-open;
+            font-size: 20px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 5px 40px 0;
+            width: auto;
+            font-size: 22px;
+            vertical-align: middle;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 25px 20px;
+        font-size: 60px;
+        background: $green;
+        color: #fff;
+
+        &--register {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__title {
+        margin: 0 0 50px;
+        font-family: $font-family-open;
+        font-size: 48px;
+        text-transform: uppercase;
+
+        &--section {
+            margin: 30px 0 5px;
+            font-size: 24px;
+            text-align: left;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        margin-top: 5px;
+        font-family: $font-family-open;
+        font-size: 18px;
+        text-transform: none;
+        color: $green;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+            color: lighten($green, 20);
+        }
+
+        .form__section-title & {
+            display: block;
+        }
+    }
+
+    &__description {
+        margin: 0 0 25px;
+        font-size: 30px;
+        font-family: $font-family-open;
+
+        div + div {
+            margin-top: 5px;
+        }
+    }
+
+    &__field {
+        @include transition(all, 0.3s, ease);
+        padding: 0 20px;
+        height: 55px;
+        width: 100%;
+        font-family: $font-family-open;
+        font-size: 18px;
+        line-height: 60px;
+        border-radius: 2px;
+        border: 1px solid $border-gray;
+        background: #fff;
+        color: #000;
+
+        &:focus {
+            outline: none;
+        }
+
+        &+& {
+            border-top: none;
+        }
+
+        &+.form__btn {
+            margin-top: 20px;
+        }
+
+        &.ng-invalid-password-check {
+            border: 1px solid $green;
+        }
+
+        &--textarea {
+            padding: 20px;
+            height: 100px;
+            line-height: normal;
+            resize: none;
+        }
+
+        &--date {
+            width: calc(100% / 3 - 6px);
+
+            &+& {
+                margin-left: 5px;
+                border: 1px solid $border-gray;
+            }
+        }
+
+        &--selected  {
+            & + .form__select-label {
+                color: #000;
+            }
+        }
+
+        & + .form__select {
+            .form__select-label {
+                border-top: none;
+            }
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin: 0;
+        padding: 10px 0 6px;
+        font-family: $font-family-open;
+        font-size: 25px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        color: #fff;
+
+        &--orange {
+            width: 100%;
+            background: $green;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background: #fff;
+                color: $green;
+                border: 1px solid $green;
+            }
+        }
+
+        &--black {
+            background: $gray-darkest;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $green;
+            }
+        }
+
+        &--link {
+            margin-bottom: 30px;
+            padding: 15px 0;
+            font-size: 22px;
+            border-bottom: 1px solid #d0d0d0;
+            background: transparent;
+            color: #000;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $green;
+            }
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: default;
+        }
+    }
+
+    &__error {
+        margin: 10px 0 0;
+        font-family: $font-family-open;
+        font-size: 16px;
+        text-align: left;
+        color: $green;
+    }
+
+    &__tos {
+        position: relative;
+        margin: 20px 0;
+        text-align: left;
+
+        > span {
+            display: inline-block;
+            line-height: normal;
+            vertical-align: middle;
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        left: -9999px;
+
+        &:checked + .form__checkbox-label {
+            border-color: $green;
+
+            &:before {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+            }
+        }
+    }
+
+    &__checkbox-label {
+        @include transition(all, 0.2s, ease);
+        position: relative;
+        display: inline-block;
+        margin: 0 10px 0 0;
+        width: 25px;
+        height: 25px;
+        border: 1px solid $border-gray;
+        background: #fff;
+        vertical-align: middle;
+        cursor: pointer;
+
+
+        &:before {
+            @include transition(all, 0.2s, ease);
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 17px;
+            height: 17px;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+            background: $green;
+            content: '';
+        }
+    }
+
+    &__date {
+        @include clearfix();
+    }
+
+    &__select {
+        position: relative;
+
+        &--date {
+            width: calc(100% / 3 - 6px);
+            float: left;
+
+            &+& {
+                margin-left: 9px;
+            }
+        }
+
+        .glyphicon-option-vertical {
+            @include centerY();
+            right: 5px;
+            z-index: 1;
+            font-size: 16px;
+            color: $green;
+        }
+    }
+
+    &__select-label {
+        position: absolute;
+        padding-left: 20px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 55px;
+        font-family: $font-family-open;
+        font-size: 18px;
+        line-height: 60px;
+        text-align: left;
+        border-radius: 2px;
+        border: 1px solid $border-gray;
+        background: #fff;
+        color: darken($border-gray, 20);
+        pointer-events: none;
+
+        &--selected {
+            color: #000;
+        }
+    }
+}

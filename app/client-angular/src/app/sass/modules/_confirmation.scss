@@ -1,0 +1,32 @@
+.confirm {
+    text-align: center;
+
+    &__title {
+        margin: 0;
+        font-family: $font-family-open;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $cyan;
+    }
+
+    &__text {
+        margin: 0 0 40px;
+        font-family: $font-family-open;
+        font-size: 22px;
+    }
+
+    &__highlight {
+        color: $green;
+    }
+
+    &__btn-confirm {
+        margin: 0 auto;
+        padding: 8px 0 5px;
+        display: block;
+        width: 120px;
+        font-family: $font-family-open;
+        font-size: 20px;
+        text-transform: uppercase;
+        border-radius: 2px;
+    }
+}

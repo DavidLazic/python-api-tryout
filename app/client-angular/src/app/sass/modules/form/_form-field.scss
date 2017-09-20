@@ -1,0 +1,26 @@
+.form-field {
+    @include transition(all, 0.25s, ease);
+    display: block;
+    padding: 0 15px;
+    width: 100%;
+    height: 40px;
+    font-family: $font-family-open;
+    font-size: 14px;
+    border: 1px solid #d7d9da;
+    border-radius: 4px;
+    color: #999;
+    background-color: #fff;
+
+    &:active,
+    &:focus,
+    &:active:focus{
+        outline: none;
+        border: 1px solid #b9bbc3;
+        color: #445061;
+        background-color: #fff;
+    }
+
+    &__wrapper {
+        @include clearfix();
+    }
+}

@@ -1,0 +1,38 @@
+.layout {
+    @include transition(all, 0.3s, ease);
+    position: relative;
+    margin: 0;
+    padding: 0 25px;
+    width: 100%;
+    min-height: 100vh;
+    font-family: $font-family-open;
+    font-size: 14px;
+    background: $gray-darker;
+
+    &__view {
+        @include transition(all, 0.25s, ease);
+        position: relative;
+        padding: 0;
+        background: #fff;
+
+        &.ng-enter {
+            @include transition(all, 0.25s, ease);
+
+            &.ng-enter-active {
+
+            }
+        }
+
+        &.ng-leave {
+            display: none;
+        }
+    }
+
+    &__section {
+        padding: 30px;
+    }
+
+    .modal-open & {
+        overflow: hidden;
+    }
+}

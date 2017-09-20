@@ -1,0 +1,21 @@
+.account {
+
+    &__title {
+        @include transition(all, 0.3s, ease);
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        font-size: 22px;
+        font-family: $font-family-oswald;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-bottom: 1px solid $gray-light-border;
+        color: $gray-text-darkest;
+
+        span {
+            display: block;
+            opacity: 0;
+            animation: slideInRight 0.3s ease forwards;
+            -webkit-animation: slideInRight 0.3s ease forwards;
+        }
+    }
+}

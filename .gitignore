@@ -1,0 +1,16 @@
+.DS_Store
+.tmp/
+app/config.py
+manage.py
+hyperion/
+static/
+app/database/
+__pycache__/
+node_modules/
+dist/
+logs
+*.log
+npm-debug.log*
+.sass-cache
+.temp
+.tmp
